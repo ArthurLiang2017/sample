@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>@yield('title', 'Sample App') - Laravel 入门教程</title>
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -14,5 +14,7 @@
         @include('layouts._footer')
     </div>
 </div>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </body>
 </html>
