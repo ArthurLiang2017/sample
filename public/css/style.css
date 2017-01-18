@@ -181,7 +181,7 @@ input {
     margin: 0;
     padding-left: 0;
 }
-li {
+.users li {
     overflow: auto;
     padding: 10px 0;
     border-bottom: 1px solid #eee;
