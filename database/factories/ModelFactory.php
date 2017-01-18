@@ -23,5 +23,6 @@ $factory->define(App\Models\User::class, function (Faker\Generator $faker) {
         'password' => str_random(10),
         'remember_token' => str_random(10),
         'is_admin' => false,
+        'activated' => true,
     ];
 });
