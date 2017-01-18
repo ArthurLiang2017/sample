@@ -25,9 +25,9 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $hidden = [
+    /*protected $hidden = [
         'password', 'remember_token',
-    ];
+    ];*/
 
     public static function boot()
     {
@@ -35,6 +35,11 @@ class User extends Authenticatable
         static::creating(function($user){
             $user->activation_token = str_random(30);
         });
+    }
+
+    public function statuses()
+    {
+        return $this->hasMany(Status::class);
     }
 
     public function gravatar($size = '100')
@@ -46,5 +51,11 @@ class User extends Authenticatable
     public function setPasswordAttribute($password)
     {
         $this->attributes['password'] = bcrypt($password);
+    }
+
+
+    public function feed()
+    {
+        return $this->statuses()->orderBy('created_at', 'desc');
     }
 }
